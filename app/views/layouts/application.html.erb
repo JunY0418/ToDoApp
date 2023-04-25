@@ -4,12 +4,15 @@
     <title>ToDoApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <meta content="width=device-width,initial-scale=1" name="viewport"/>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+    <header class="header">
+      <p class="header_pageTitle">Boards</p>
+    </header>
     <%= yield %>
   </body>
 </html>
