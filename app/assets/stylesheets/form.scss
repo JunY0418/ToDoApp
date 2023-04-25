@@ -1,0 +1,72 @@
+input, select {
+  margin-top: 5px;
+
+  &.text {
+    width: 100%;
+    padding: 16px 24px;
+    border: 1px solid #EBEBEB;
+    background: #F4F4F4;
+    border-radius: 10px;
+  }
+}
+
+label {
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+/* identical to box height */
+color: #000000;
+}
+
+.field {
+  margin: 3% 0;
+  margin-top: 20px;
+}
+
+textarea {
+  width: 100%;
+  margin: 8px 0px;
+  padding: 8px 8px;
+  min-height: 440px;
+  resize: vertical;
+  border: 1px solid #EBEBEB;
+}
+
+.form_Title {
+  font-family: 'Avenir';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 36px;
+  margin: 20px 0px 25px;
+  /* identical to box height */
+
+
+  color: #000000;
+}
+
+.actions {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  width: 90%;
+  height: 40px;
+
+  background-color: #F8BD1C;
+  border-radius: 4px;
+  border:none;
+
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 25px;
+  /* identical to box height */
+  color: #FFFFFF;
+}
