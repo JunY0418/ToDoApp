@@ -1,6 +1,6 @@
 <%= link_to board_path(board) do %>
-  <div class="card">
-    <div class="card_content">
+  <div class="board">
+    <div class="board_content">
       <div class="board_title">
         <%= board.title %>
       </div>
@@ -8,8 +8,12 @@
         <%= truncate(board.content, length:30) %>
       </div>
     </div>
-    <div class="card_details">
-      <%=image_tag 'Oval.svg'%>
+    <div class="card_details_user_image">
+      <% if board.user.present? && board.user.profile&.avatar&.attached? %>
+      <%= image_tag board.user.profile.avatar %>
+      <% else %>
+      <%= image_tag 'login_avatar.svg' %>
+      <% end %>
       <%# <%= image_tag article.user.avatar_image %>
     </div>
   </div>

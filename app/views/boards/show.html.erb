@@ -19,9 +19,12 @@
         <%= @board.content %>
       </div>
     </div>
-    <div class="card_details">
-      <%=image_tag 'Oval.svg'%>
-      <%# <%= image_tag article.user.avatar_image %>
+    <div class="card_details_user_image">
+      <% if  @board.user.present? && @board.user.profile&.avatar&.attached? %>
+        <%= image_tag  @board.user.profile.avatar %>
+      <% else %>
+        <%= image_tag 'login_avatar.svg' %>
+      <% end %>
     </div>
   </div>
 </div>

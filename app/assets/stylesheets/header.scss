@@ -20,6 +20,28 @@ $back-icon-size: 16px;
     }
   }
 
+.header_details {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+  
+    &_user {
+      display: flex;
+  
+      &_image {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+  
+        img {
+          width: $avatar-size;
+          height: $avatar-size;
+          border-radius: 30px;
+        }
+      }
+    }
+  }
+
   a.header_loginBtn {
     background-color: #fff;
     height: $avatar-size;
