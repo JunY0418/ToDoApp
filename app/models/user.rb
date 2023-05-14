@@ -16,8 +16,6 @@ class User < ApplicationRecord
     # else
     #   self.email.split('@').first
     # end
-
-    profile&.name || self.email.split('@').first
-
+    profile&.name.presence || self.email.split('@').first
   end
 end

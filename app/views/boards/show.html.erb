@@ -1,21 +1,32 @@
 <div class="container">
-  <div class="board">
+
+  <div class="board_titlePage">
+  <%= @board.title %>
+  </div>
+
+  <div class="board_detail_actions">
+  <% if user_signed_in? && current_user.has_written?(@board) %>
+    <div class="dropdown" id="toggle">
+      <%= image_tag 'actions.svg', class: 'dropbtn'%>
+      <ul class="toggle-list mini" >
+        <li class="toggle-subtitle"> <%= link_to 'Edit', edit_board_path(@board) %> </li>
+        <li class="toggle-subtitle"> <%= link_to 'Delete', board_path(@board), data: {method: 'delete' , confirm: '本当に削除してよろしいですか'} %> </li>
+      </ul>
+    </div>
+  <%end%>
+  </div>
+
+  <div class="board_content_eyecatch">
+  <% if @board.eyecatch.attached? %>
+    <div class="board_image">
+    <%= image_tag @board.eyecatch %>
+    </div>
+  <% end %>
+  </div>
+
+  <div class="board_show">
     <div class="board_content">
-      <div class="board_title">
-        <%= @board.title %>
-      </div>
-        <div class="board_detail_actions">
-        <% if user_signed_in? && current_user.has_written?(@board) %>
-          <div class="dropdown" id="toggle">
-            <%= image_tag 'actions.svg', class: 'dropbtn'%>
-            <ul class="toggle-list mini" >
-              <li class="toggle-subtitle"> <%= link_to 'Edit', edit_board_path(@board) %> </li>
-              <li class="toggle-subtitle"> <%= link_to 'Delete', board_path(@board), data: {method: 'delete' , confirm: '本当に削除してよろしいですか'} %> </li>
-            </ul>
-          </div>
-        <%end%>
-        </div>
-      <div class="board_content">
+      <div class="paragraph">
         <%= @board.content %>
       </div>
     </div>

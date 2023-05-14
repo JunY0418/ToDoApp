@@ -1,6 +1,6 @@
 @import 'variables';
 
-$avatar-size: 40px;
+$avatar-size: 36px;
 $header-padding-y: 16px;
 $back-icon-size: 16px;
 
@@ -8,7 +8,7 @@ $back-icon-size: 16px;
 .header {
   display: flex;
   justify-content: unset;
-  padding: $header-padding-y 16px;
+  padding: $header-padding-y $header-padding-y;
   font-weight: bold;
 
   border-bottom:solid
@@ -37,7 +37,28 @@ $back-icon-size: 16px;
           width: $avatar-size;
           height: $avatar-size;
           border-radius: 30px;
+          right: 10px;
+          margin-top: -8px;
         }
+      }
+    }
+  }
+
+  .header_dropdown {
+    position: absolute;
+    right: 20px;
+    top: 0px;
+
+    &_image {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      img {
+        width: $avatar-size;
+        height: $avatar-size;
+        border-radius: 30px;
+        right: 0;
       }
     }
   }

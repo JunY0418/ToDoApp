@@ -29,10 +29,15 @@
 <%= link_to board_path(boards) do %>
 <div class="board">
   <div class="board_content">
+    <% if boards.eyecatch.attached? %>
+    <div class="board_image">
+      <%= image_tag boards.eyecatch %>
+    </div>
+    <% end %>
     <div class="board_title">
       <%= boards.title %>
     </div>
-    <div class="board_content">
+    <div class="board_paragraph">
       <%= truncate(boards.content, length:30) %>
     </div>
   </div>

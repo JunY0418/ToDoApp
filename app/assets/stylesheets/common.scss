@@ -5,8 +5,8 @@ $base-bg-color: #e2d1c1;
 
 .board_detail_actions {
   right: 0px;
-  top: 30px;
-  position: absolute;
+  top: -15px;
+  position: relative;
 }
 
 // .board_detail img.dropbtn {
@@ -15,8 +15,6 @@ $base-bg-color: #e2d1c1;
 
 
 .dropdown {
-  // position: relative;
-  // display: inline-block;
   position: absolute;
   right: 20px;
   top: 0px;
@@ -38,6 +36,7 @@ $base-bg-color: #e2d1c1;
   position: absolute;
   padding: 0;
   top: 50px;
+  right: 0px;
   display: block;
   background: #fff;
   opacity: 0;
@@ -47,6 +46,7 @@ $base-bg-color: #e2d1c1;
 
   &.mini {
     min-width: 100px;
+    right: 0px;
     // width: none;
   }
 
@@ -86,6 +86,7 @@ $base-bg-color: #e2d1c1;
 
   &.mini {
     min-width: 100px;
+    right: 0px;
     // width: none;
   }
   .header-toggle-subtitle {

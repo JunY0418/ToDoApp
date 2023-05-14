@@ -84,7 +84,7 @@
   <header class="header">
     <%= link_to 'Boards', boards_path, data: { method: 'get' }, class: "header_pageTitle" %>
     <%if user_signed_in? %>
-    <div class="dropdown" id="toggle2">
+    <div class="header_dropdown" id="toggle2">
       <div class="header_details_user_image">
       <% if current_user.profile&.avatar&.attached? %>
         <%= image_tag current_user.profile.avatar, class: 'header_avatar_dropbtn' %>
