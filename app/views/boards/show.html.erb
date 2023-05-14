@@ -16,13 +16,14 @@
   <%end%>
   </div>
 
-  <div class="board_content_eyecatch">
   <% if @board.eyecatch.attached? %>
+  <div class="board_content_eyecatch">
     <div class="board_image">
     <%= image_tag @board.eyecatch %>
     </div>
-  <% end %>
   </div>
+  <% end %>
+
 
   <div class="board_show">
     <div class="board_content">
@@ -40,7 +41,6 @@
   </div>
 </div>
 
-<div class="container">
   <%= link_to new_board_path do %>
     <div class="board_addNew">
       <div class="board_addNew_link">
@@ -48,4 +48,3 @@
       </div>
     </div>
   <% end %>
-</div>
