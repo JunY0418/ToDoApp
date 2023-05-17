@@ -5,7 +5,7 @@
       <% if current_user.profile&.avatar&.attached? %>
       <%= image_tag current_user.profile.avatar %>
       <% else %>
-      <%= image_tag 'login_avatar.svg' %>
+      <%= image_tag 'login_avatar.png' %>
       <% end %>
     </div>
     <div class="profilePage_user_basicInfo">
@@ -35,7 +35,7 @@
     </div>
     <% end %>
     <div class="board_title">
-      <%= boards.title %>
+      <%= truncate(boards.title, length:23) %>
     </div>
     <div class="board_paragraph">
       <%= truncate(boards.content, length:30) %>
@@ -45,7 +45,7 @@
       <% if current_user.profile&.avatar&.attached? %>
       <%= image_tag current_user.profile.avatar %>
       <% else %>
-      <%= image_tag 'login_avatar.svg' %>
+      <%= image_tag 'login_avatar.png' %>
       <% end %>
     <%# <%= image_tag article.user.avatar_image %>
   </div>

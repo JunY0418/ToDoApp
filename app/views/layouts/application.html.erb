@@ -89,7 +89,7 @@
       <% if current_user.profile&.avatar&.attached? %>
         <%= image_tag current_user.profile.avatar, class: 'header_avatar_dropbtn' %>
       <% else %>
-        <%= image_tag 'login_avatar.svg', class: 'header_avatar_dropbtn'%>
+        <%= image_tag 'login_avatar.png', class: 'header_avatar_dropbtn'%>
       <% end %>
       <ul class="header-toggle-list mini">
         <li class="header-toggle-subtitle">

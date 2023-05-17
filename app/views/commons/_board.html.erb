@@ -7,7 +7,7 @@
     </div>
     <% end %>
     <div class="board_title">
-      <%= board.title %>
+      <%= truncate(board.title, length:23) %>
     </div>
       <div class="board_paragraph">
         <%= truncate(board.content, length:30) %>
@@ -17,7 +17,7 @@
     <% if board.user.present? && board.user.profile&.avatar&.attached? %>
     <%= image_tag board.user.profile.avatar %>
     <% else %>
-    <%= image_tag 'login_avatar.svg' %>
+    <%= image_tag 'login_avatar.png' %>
     <% end %>
     <%# <%= image_tag article.user.avatar_image %>
   </div>
