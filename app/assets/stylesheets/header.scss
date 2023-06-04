@@ -55,9 +55,9 @@ $back-icon-size: 16px;
       justify-content: center;
 
       img {
+        border-radius: 30px;
         width: $avatar-size;
         height: $avatar-size;
-        border-radius: 30px;
         right: 0;
       }
     }
